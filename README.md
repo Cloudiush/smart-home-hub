@@ -17,17 +17,9 @@ Projekt jest w pełni skonteneryzowany i gotowy do uruchomienia jedną komendą,
 
 1. Sklonuj repozytorium.
 2. Skopiuj plik `.env.example` do pliku `.env` (lub upewnij się, że plik `.env` istnieje w głównym katalogu) i zdefiniuj w nim porty:
-   ```env
    WS_PORT=8080
    GRPC_PORT=50051
-   HUB_SECRET_TOKEN=twoj_sekret
+   HUB_SECRET_TOKEN=twoj_secret
 3. Uruchom system w tle korzystając z Docker Compose:
     docker-compose up -d
 4. Otwórz plik `dashboard/index.html` w dowolnej przeglądarce, aby zobaczyć działający interfejs na żywo.
-
-## Spełnione wymagania techniczne
-
-* **Komunikacja:** Zastosowano gRPC (z plikiem kontraktu `.proto`) do komunikacji wewnątrzsieciowej oraz WebSockets do komunikacji z klientem webowym.
-* **Optymalizacja obrazów:** Kontenery bazują na oficjalnych, lekkich obrazach `node:alpine`, co znacząco redukuje ich rozmiar docelowy i przyspiesza budowanie.
-* **Bezpieczeństwo i konfiguracja:** Całkowity zakaz "hardkodowania" danych. Porty, identyfikatory urządzeń oraz klucze konfiguracyjne wstrzykiwane są dynamicznie przez plik `.env` i mapowane w `docker-compose.yml`.
-* **Izolacja sieciowa:** Mikroserwis urządzenia łączy się z centralą za pomocą wewnętrznej sieci Dockera (używając nazwy serwisu `central-hub`), a nie przez `localhost`.
