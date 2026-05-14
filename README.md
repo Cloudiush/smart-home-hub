@@ -1,7 +1,7 @@
 # Smart Home Hub (gRPC + WebSockets)
 
 **Autorzy:** Klaudiusz Staniszewski 34479 oraz Jakub Kamiński 34490
-**Temat projektu:** Symulator urządzeń IoT komunikujących się z centralą przez gRPC, podczas gdy użytkownik steruje nimi przez dashboard webowy (WebSockets).
+**Temat projektu:** Smart Home Hub (gRPC + WebSockets): Symulator urządzeń IoT komunikujących się z centralą przez wydajne gRPC, podczas gdy użytkownik steruje nimi przez dashboard webowy (WebSockets)
 
 ## Opis architektury
 
