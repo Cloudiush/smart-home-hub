@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+service SmartHome {
+  rpc SendReport (DeviceReport) returns (StatusResponse) {}
+}
+
+message DeviceReport {
+  string id = 1;
+  string type = 2;
+  float value = 3;
+}
+
+message StatusResponse {
+  string message = 1;
+  bool success = 2;
+}

@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  central-hub:
+    build: ./central-hub
+    ports:
+      - "${WS_PORT}:${WS_PORT}"
+      - "${GRPC_PORT}:${GRPC_PORT}"
+    env_file:
+      - .env
+
+  sensor-salon:
+    build: ./iot-device
+    command: node device.js
+    environment:
+      - DEVICE_ID=Salon
+    env_file:
+      - .env
+    depends_on:
+      - central-hub
+
+  sensor-kuchnia:
+    build: ./iot-device
+    command: node device.js
+    environment:
+      - DEVICE_ID=Kuchnia
+    env_file:
+      - .env
+    depends_on:
+      - central-hub
