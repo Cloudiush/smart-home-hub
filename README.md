@@ -12,14 +12,8 @@ Projekt to rozproszony system IoT działający w architekturze mikroserwisów. S
 3. **Dashboard Webowy (Klient WebSockets):** Lekki interfejs użytkownika, który dynamicznie reaguje na komunikaty z centrali i aktualizuje statusy urządzeń na żywo.
 
 ## Instrukcja uruchomienia
-
-Projekt jest w pełni skonteneryzowany i gotowy do uruchomienia jedną komendą, bez konieczności lokalnej instalacji środowiska Node.js.
-
 1. Sklonuj repozytorium.
 2. Skopiuj plik `.env.example` do pliku `.env` (lub upewnij się, że plik `.env` istnieje w głównym katalogu) i zdefiniuj w nim porty:
-   WS_PORT=8080
-   GRPC_PORT=50051
-   HUB_SECRET_TOKEN=twoj_secret
 3. Uruchom system w tle korzystając z Docker Compose:
     docker-compose up -d
 4. Otwórz plik `dashboard/index.html` w dowolnej przeglądarce, aby zobaczyć działający interfejs na żywo.
