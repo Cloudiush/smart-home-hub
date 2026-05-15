@@ -19,5 +19,6 @@ Projekt to rozproszony system IoT działający w architekturze mikroserwisów. S
     cd smart-home-hub
 2. Skopiuj plik `.env.example` do pliku `.env`
 3. Uruchom system w tle korzystając z Docker Compose:
+    ```bash
     docker-compose up -d
 4. Otwórz plik `dashboard/index.html` w dowolnej przeglądarce, aby zobaczyć działający interfejs na żywo.
