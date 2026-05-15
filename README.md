@@ -14,6 +14,7 @@ Projekt to rozproszony system IoT działający w architekturze mikroserwisów. S
 
 ## Instrukcja uruchomienia
 1. Sklonuj repozytorium.
+    ```bash
     git clone https://github.com/Cloudiush/smart-home-hub.git
     cd smart-home-hub
 2. Skopiuj plik `.env.example` do pliku `.env`
